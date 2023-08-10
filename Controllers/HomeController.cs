@@ -50,6 +50,7 @@ public class HomeController : Controller
         }
     }
 
+    [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
         ViewBag correcta = juego.VerificarRespuesta(idPregunta, idRespuesta); // si respuesta seleccionada es correcta (bool)
