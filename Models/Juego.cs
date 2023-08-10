@@ -7,6 +7,11 @@ public class Juego
     static private List<Respuesta> respuestas {get; set;}
 }
 
+public Juego()
+{
+
+}
+
 public Juego(string user, int puntaje, int cantPregsCorrectas, List<Pregunta> pregs, List<Respuesta> rtas)
 {
     username = user;
@@ -42,12 +47,12 @@ public void CargarPartida(string nickname, int dificultad, int categoria)
 
 public Pregunta ObtenerProximaPregunta()
 {
-    return preguntas[GenerarRandom(0, preguntas.Length()-1)];
+    return preguntas[GenerarRandom(0, preguntas.Count-1)];
 }
 
 public List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
 {
-    return ObtenerRespuestas(idPregunta);
+    return BD.ObtenerRespuestas(idPregunta);
 }
 
 public bool VerificarRespuesta(int idPregunta, int idRespuesta)
@@ -55,7 +60,7 @@ public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     bool found = false;
     int i = 0;
     bool correcta;
-    while (i < respuestas.Length() && !found)
+    while (i < respuestas.Count && !found)
     {
         if (respuestas[i].idRespuesta == idRespuesta)
         {
@@ -84,14 +89,20 @@ public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
         EliminarPregunta(idPregunta);
     }
+    return correcta;
 
+}
+
+public Respuesta ObtenerRespuestaCorrecta(int idPregunta)
+{
+    return BD.ObtenerRespuestaCorrecta(idPregunta);
 }
 
 private void EliminarPregunta(int idPregunta)
 {
     bool found = false;
     int i = 0;
-    while (i < preguntas.Length && !found)
+    while (i < preguntas.Count && !found)
     {
         if (idPregunta = preguntas[i].idPregunta)
         {
@@ -106,7 +117,7 @@ private int ObtenerDificultadPregunta(int idPregunta)
 {
     bool found = false;
     int i = 0, dificultad;
-    while (i < preguntas.Length() && !found)
+    while (i < preguntas.Count && !found)
     {
         if (preguntas[i].idRespuesta == idPregunta)
         {

@@ -67,6 +67,11 @@ public Respuesta(int idRta, int idPreg, int opc, string cont, string fto, bool c
 
 }
 
+public Respuesta()
+{
+
+}
+
 public list<Categoria> ObtenerCategorias()
 {
     List<Categoria> listaCategorias = new List<Categoria>;
@@ -142,4 +147,15 @@ public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
         }
     }
     return listaRespuestas;
+}
+
+public static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
+{
+    Respuesta correcta = new Respuesta();
+    string sql = "SELECT * FROM Respuesta INNER JOIN Pregunta ON Pregunta.idPregunta = Respuesta.idPregunta WHERE Respuesta.correcta = 1 AND Pregunta.IdPregunta = @pIdPregunta"
+    using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            correcta = db.QueryFirstOrDefault<Respuesta>(sql, new {@pIdPregunta = idPregunta});
+        }
+    return correcta;
 }
