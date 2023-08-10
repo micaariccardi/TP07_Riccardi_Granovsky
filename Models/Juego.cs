@@ -82,14 +82,24 @@ public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     }
     else 
     {
-        //Acá va eliminarpregunta
+        EliminarPregunta(idPregunta);
     }
 
 }
 
 private void EliminarPregunta(int idPregunta)
 {
-    //busqueda con while por la lista de preguntas y nos guardamos el indice para dsp eliminarla con removeat
+    bool found = false;
+    int i = 0;
+    while (i < preguntas.Length && !found)
+    {
+        if (idPregunta = preguntas[i].idPregunta)
+        {
+            found = true;
+            preguntas.removeat(i);
+        }
+        i++;
+    }
 }
 
 private int ObtenerDificultadPregunta(int idPregunta)
