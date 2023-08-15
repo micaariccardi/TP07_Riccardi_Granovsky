@@ -22,7 +22,7 @@ public class HomeController : Controller
     public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
         Juego.CargarPartida(username, dificultad, categoria);
-        if (Juego.preguntas.Count == 0)
+        if (Juego.ObtenerProximaPregunta() == null)
         {
             return RedirectToAction("ConfigurarJuego");
         }
@@ -31,13 +31,14 @@ public class HomeController : Controller
             return RedirectToAction("Jugar");
         }
     }
-
+   
     public IActionResult Jugar()
     {
-        if (Juego.preguntas.Count == 0)
+        if (Juego.ObtenerProximaPregunta() == null)
         {
-            ViewBag.nombre = Juego.username;
-            ViewBag.puntaje = Juego.puntajeActual;
+            ViewBag.nombre = Juego.DevolverUsername();
+            ViewBag.puntaje = Juego.DevolverPuntajeActual();
+            
             return View("Fin");
         }
         else

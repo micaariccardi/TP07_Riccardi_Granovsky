@@ -120,8 +120,17 @@ private static int GenerarRandom(int min, int max)
     num = rnd.Next(min, max+1);
     return num;
 }
-
+ public static string DevolverUsername()
+{
+    return username;
 }
+
+public static int DevolverPuntajeActual()
+{
+    return puntajeActual;
+}
+}
+
 
 
 
