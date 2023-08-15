@@ -1,66 +1,51 @@
-public class Juego
+ public static class Juego
 {
-    static private string username {get; set;}
-    static private int puntajeActual {get; set;}
-    static private int cantidadPreguntasCorrectas {get; set;}
-    static private List<Pregunta> preguntas {get; set;}
-    static private List<Respuesta> respuestas {get; set;}
-}
+    private static string username {get; set;}
+    private static int puntajeActual {get; set;}
+    private static int cantidadPreguntasCorrectas {get; set;}
+    private static List<Pregunta> preguntas {get; set;}
+    private static List<Respuesta> respuestas {get; set;}
 
-public Juego()
-{
 
-}
-
-public Juego(string user, int puntaje, int cantPregsCorrectas, List<Pregunta> pregs, List<Respuesta> rtas)
-{
-    username = user;
-    puntajeActual = puntaje;
-    cantidadPreguntasCorrectas = cantPregsCorrectas;
-    preguntas = pregs;
-    respuestas = rtas;
-}
-
-public void InicializarJuego()
+public static void InicializarJuego()
 {
     username = "";
     puntajeActual = 0;
     cantidadPreguntasCorrectas = 0;
 }
 
-public list<Categoria> ObtenerCategorias()
+public static List<Categoria> ObtenerCategorias()
 {
     return BD.ObtenerCategorias();
 }
 
-public List<Dificultad> ObtenerDificultades()
+public static List<Dificultad> ObtenerDificultades()
 {
     return BD.ObtenerDificultades();
 }
 
-public void CargarPartida(string nickname, int dificultad, int categoria)
+public static void  CargarPartida(string nickname, int dificultad, int categoria)
 {
     username = nickname;
     preguntas = BD.ObtenerPreguntas(dificultad, categoria);
     respuestas = BD.ObtenerRespuestas(preguntas);
 }
 
-public Pregunta ObtenerProximaPregunta()
+public static Pregunta ObtenerProximaPregunta()
 {
     return preguntas[GenerarRandom(0, preguntas.Count-1)];
 }
 
-public List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
+public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
 {
-    return BD.ObtenerRespuestas(idPregunta);
+    return BD.ObtenerRespuestas(preguntas);
 }
 
-public bool VerificarRespuesta(int idPregunta, int idRespuesta)
+public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
 {
-    bool found = false;
+    bool found = false, correcta = false;
     int i = 0;
-    bool correcta;
-    while (i < respuestas.Count && !found)
+     while (i < respuestas.Count && !found)
     {
         if (respuestas[i].idRespuesta == idRespuesta)
         {
@@ -71,7 +56,7 @@ public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     }
     if(correcta)
     {
-        int dificultad = ObtenerDificultadPregunta(idPregunta)
+        int dificultad = ObtenerDificultadPregunta(idPregunta);
         switch(dificultad)
         {
             case 1:
@@ -90,51 +75,52 @@ public bool VerificarRespuesta(int idPregunta, int idRespuesta)
         EliminarPregunta(idPregunta);
     }
     return correcta;
-
 }
 
-public Respuesta ObtenerRespuestaCorrecta(int idPregunta)
+public static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
 {
     return BD.ObtenerRespuestaCorrecta(idPregunta);
 }
 
-private void EliminarPregunta(int idPregunta)
+private static void EliminarPregunta(int idPregunta)
 {
     bool found = false;
     int i = 0;
     while (i < preguntas.Count && !found)
     {
-        if (idPregunta = preguntas[i].idPregunta)
+        if (idPregunta == preguntas[i].idPregunta)
         {
             found = true;
-            preguntas.removeat(i);
+            preguntas.RemoveAt(i);
         }
         i++;
     }
 }
 
-private int ObtenerDificultadPregunta(int idPregunta)
+private static int ObtenerDificultadPregunta(int idPregunta)
 {
     bool found = false;
-    int i = 0, dificultad;
+    int i = 0, dificultad = 0;
     while (i < preguntas.Count && !found)
     {
-        if (preguntas[i].idRespuesta == idPregunta)
+        if (preguntas[i].idPregunta == idPregunta)
         {
             found = true;
-            dificultad = preguntas[i].dificultad;
+            dificultad = preguntas[i].idDificultad;
         }
         i++;
     }
     return dificultad;
 }
 
-private int GenerarRandom(int min, int max)
+private static int GenerarRandom(int min, int max)
 {
     int num;
     Random rnd = new Random();
     num = rnd.Next(min, max+1);
     return num;
+}
+
 }
 
 

@@ -1,9 +1,9 @@
 public class Dificultad 
 {
-    int idDificultad {get; set;}
-    string nombre {get; set;}
+    public int idDificultad {get; set;}
+    public string nombre {get; set;}
 
-public Dificultad(int idDif, int nom)
+public Dificultad(int idDif, string nom)
 {
     idDificultad = idDif;
     nombre = nom;

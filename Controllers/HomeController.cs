@@ -6,8 +6,6 @@ namespace TP07_Riccardi_Granovsky.Controllers;
 
 public class HomeController : Controller
 {
-    Juego juego = New Juego();
-
     public IActionResult Index()
     {
         return View();
@@ -15,16 +13,16 @@ public class HomeController : Controller
 
     public IActionResult ConfigurarJuego()
     {
-        juego.InicializarJuego();
-        ViewBag categorias = BD.ObtenerCategorias();
-        ViewBag dificultades = BD.ObtenerDificultades();        
+        Juego.InicializarJuego();
+        ViewBag.categorias = BD.ObtenerCategorias();
+        ViewBag.dificultades = BD.ObtenerDificultades();        
         return View();
     }
 
     public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
-        juego.CargarPartida(username, dificultad, categoria);
-        if (juego.preguntas.Count == 0)
+        Juego.CargarPartida(username, dificultad, categoria);
+        if (Juego.preguntas.Count == 0)
         {
             return RedirectToAction("ConfigurarJuego");
         }
@@ -36,16 +34,16 @@ public class HomeController : Controller
 
     public IActionResult Jugar()
     {
-        if (juego.preguntas.Count == 0)
+        if (Juego.preguntas.Count == 0)
         {
-            ViewBag nombre = juego.username;
-            ViewBag puntaje = juego.puntajeActual;
+            ViewBag.nombre = Juego.username;
+            ViewBag.puntaje = Juego.puntajeActual;
             return View("Fin");
         }
         else
         {
-            ViewBag pregunta = juego.ObtenerProximaPregunta();
-            ViewBag respuestas = juego.ObtenerProximasRespuestas(pregunta.idPregunta);
+            ViewBag.pregunta = Juego.ObtenerProximaPregunta();
+            ViewBag.respuestas = Juego.ObtenerProximasRespuestas(ViewBag.Pregunta.idPregunta);
             return View("Juego");
         }
     }
@@ -53,10 +51,10 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        ViewBag correcta = juego.VerificarRespuesta(idPregunta, idRespuesta); // si respuesta seleccionada es correcta (bool)
-        if(!correcta)
+        ViewBag.correcta = Juego.VerificarRespuesta(idPregunta, idRespuesta); // si respuesta seleccionada es correcta (bool)
+        if(!ViewBag.correcta)
         {
-            ViewBag respuestaCorrecta = juego.ObtenerRespuestaCorrecta(idPregunta); //respuesta correcta a la pregunta
+            ViewBag.respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta); //respuesta correcta a la pregunta
         }
         return View("Respuesta");
     }

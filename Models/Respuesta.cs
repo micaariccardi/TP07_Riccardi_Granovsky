@@ -1,11 +1,11 @@
 public class Respuesta 
 {
-    int idRespuesta {get; set;}
-    int idPregunta {get; set;}
-    int opcion {get; set;}
-    string contenido {get; set;}
-    string foto {get; set;}   
-    bool correcta {get; set;}
+    public int idRespuesta {get; set;}
+    public int idPregunta {get; set;}
+    public int opcion {get; set;}
+    public string contenido {get; set;}
+    public string foto {get; set;}   
+    public bool correcta {get; set;}
 
 
 public Respuesta(int idRta, int idPreg, int opc, string cont, string fto, bool correct)

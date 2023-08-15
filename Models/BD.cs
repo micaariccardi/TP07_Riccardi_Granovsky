@@ -1,8 +1,10 @@
 using System.Data.SqlClient;
 using Dapper;
+public static class BD 
+{
 private static string _connectionString = @"Server = localhost; DataBase = PreguntadOrt; Trusted_Connection = True;";
 
-list<Categoria> ObtenerCategorias()
+public static List<Categoria> ObtenerCategorias()
 {
     List<Categoria> listaCategorias = new List<Categoria>();
     string sql = "Select * from Categoria;";
@@ -13,7 +15,7 @@ list<Categoria> ObtenerCategorias()
     return listaCategorias;
 } 
 
-List<Dificultad> ObtenerDificultades()
+public static List<Dificultad> ObtenerDificultades()
 {
     List<Dificultad> listaDificultades = new List<Dificultad>();
     string sql = "Select * from Dificultad;";
@@ -24,9 +26,9 @@ List<Dificultad> ObtenerDificultades()
     return listaDificultades;
 }
 
-List<Preguntas> ObtenerPreguntas(int dificultad, int categoria)
+public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria)
 {
-    List<Dificultad> listaPreguntas = new List<Pregunta>();
+    List<Pregunta> listaPreguntas = new List<Pregunta>();
     if (dificultad == -1 && categoria == -1)
     {
         string sql = "Select * from Pregunta;";
@@ -65,7 +67,7 @@ List<Preguntas> ObtenerPreguntas(int dificultad, int categoria)
     return listaPreguntas;
 }
 
-static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
+public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
 {
     List<Respuesta> listaRespuestas = new List<Respuesta>();
     foreach (Pregunta pregunta in preguntas)
@@ -79,7 +81,7 @@ static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
     return listaRespuestas;
 }
 
-static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
+public static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
 {
     Respuesta correcta = new Respuesta();
     string sql = "SELECT * FROM Respuesta INNER JOIN Pregunta ON Pregunta.idPregunta = Respuesta.idPregunta WHERE Respuesta.correcta = 1 AND Pregunta.IdPregunta = @pIdPregunta";
@@ -88,4 +90,6 @@ static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
             correcta = db.QueryFirstOrDefault<Respuesta>(sql, new {@pIdPregunta = idPregunta});
         }
     return correcta;
+}
+
 }
