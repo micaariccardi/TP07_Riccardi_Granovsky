@@ -1,0 +1,141 @@
+/*https://realtimecolors.com/?colors=020104-f8f1f4-170a61-ecb1c5-5abb98*/
+
+:root{
+    --negro: #020104; /*texto*/
+    --blanco: #f8f1f4; /*fondo*/
+    --azul: #170a61; /*default*/
+    --rojo: #BC3766; /*incorrecto*/
+    --verde: #5abc9a; /*correcto*/
+}
+
+body{
+    background-color: var(--blanco) !important;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--azul) ;
+}
+
+
+/*NAV*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--blanco);
+    flex-direction: row;
+}
+
+li a{
+    display: block;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    color: var(--azul);
+}
+
+ul img{
+    width: 20em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    float: left;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+li{
+    float: right;
+}
+
+div li a:hover{
+    color:var(--verde);
+} 
+
+.centro{
+    text-align: center;
+}
+
+#inicio{
+    font-size: 1.5em;
+    color: var(--azul) !important;
+    border-color: var(--verde);
+}
+
+#incio:hover{
+    background-color: var(--verde);
+}
+/*Configurar juego*/
+
+.mb-3{
+    width: 15em;
+}
+
+.opciones{
+    justify-content: space-between;
+}
+
+select{
+    font-size: 1em;
+    padding: 0.3em;;
+    border-radius: 5px;
+    border-color: rgb(231, 231, 231);
+    color: #6e6e6e;
+}
+.azul{
+    color: var(--azul);
+}
+
+/*Juego*/
+
+.botonRtas{
+    padding-top: 0.75em;
+    margin-left: 0.5em;
+
+}
+
+.invisible mark{
+    color: var(--blanco);
+    background-color: var(--blanco);
+}
+
+#foto_pregunta{
+    width: 40em;
+}
+
+/*Respuestas*/
+
+.rojo{
+    color:var(--rojo);
+}
+
+.verde{
+    color:var(--verde);
+}
+
+.azul{
+    color:var(--azul);
+}
+
+/*botones*/
+
+.btn{
+    color: var(--blanco);
+    background-color: var(--azul);
+    border-color: var(--azul);
+}
+
+.btn:hover{
+    background-color: var(--verde);
+    border-color:var(--verde)
+}
+.btn-primary:hover{
+    background-color: var(--verde);
+}
+.btn-a{
+    color:var(--blanco)
+}
