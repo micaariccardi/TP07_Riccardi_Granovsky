@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\TP07_Riccardi_Granovsky.bundle.scp.css"
     },
     {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\css\\estilos.css",
+      "PackagePath": "staticwebassets\\css\\estilos.css"
+    },
+    {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -17,12 +21,60 @@
       "PackagePath": "staticwebassets\\imagenes\\Andy.png"
     },
     {
-      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\configuracion.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\configuracion.jpg"
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\Thumbs.db",
+      "PackagePath": "staticwebassets\\imagenes\\Thumbs.db"
     },
     {
-      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\logo.png",
-      "PackagePath": "staticwebassets\\imagenes\\logo.png"
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\agua.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\agua.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\atomo.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\atomo.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\collage.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\collage.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\darth_vader.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\darth_vader.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\deporte.jfif",
+      "PackagePath": "staticwebassets\\imagenes\\deporte.jfif"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\golden_eye.png",
+      "PackagePath": "staticwebassets\\imagenes\\golden_eye.png"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\hp.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\hp.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\logo1.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\logo1.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\mona_lisa.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\mona_lisa.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\organos.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\organos.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\perdiste_jaja.gif",
+      "PackagePath": "staticwebassets\\imagenes\\perdiste_jaja.gif"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\placeholder.png",
+      "PackagePath": "staticwebassets\\imagenes\\placeholder.png"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\traviata.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\traviata.jpg"
     },
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\js\\site.js",

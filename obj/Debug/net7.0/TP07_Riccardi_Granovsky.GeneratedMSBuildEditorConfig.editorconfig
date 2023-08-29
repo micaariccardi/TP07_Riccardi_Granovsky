@@ -16,12 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = Z:\2023\Programación\TP07_Riccardi_Granovsky
 build_property._RazorSourceGeneratorDebug = 
 
+[Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/configurarJuego.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb25maWd1cmFySnVlZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/fin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxmaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/juego.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxqdWVnby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Home/respuesta copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZXNwdWVzdGEgY29weS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [Z:/2023/Programación/TP07_Riccardi_Granovsky/Views/Shared/Error.cshtml]

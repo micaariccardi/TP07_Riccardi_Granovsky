@@ -2,8 +2,6 @@
     ViewData["PreguntadOrt"] = "Home Page";
 }
 
-
-
 <h1 class="centro azul">CONFIGURAR JUEGO</h1>
     <br>
 <div class="opciones">
@@ -18,20 +16,20 @@
                     <option value="3">3</option>
                     <option value="-1">Todas</option>
                 </select>
-                <!--Buscar id's de las categoria para poner sus valores-->
+                
                 <select required name="categoria">
                     <option selected disabled class="default">Categoria</option>
-                    <option value="">Artes</option>
-                    <option>Ciencia</option>
-                    <option>Deportes</option>
-                    <option>Entretenimiento</option>
-                    <option>Geografía</option>
-                    <option>Historia</option>
-                    <option>Todas</option>
+                    <option value="1">Artes</option>
+                    <option value="2">Ciencia</option>
+                    <option value="3">Deportes</option>
+                    <option value="4">Entretenimiento</option>
+                    <option value="5">Geografía</option>
+                    <option value="6">Historia</option>
+                    <option value="-1">Todas</option>
                 </select>
             </div>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary"><a class="btn-a" href=''>Empezar</a></button>
+        <button type="submit" class="btn btn-primary"><a class="btn-a" href='@Url.Action("Comenzar")'>Empezar</a></button>
 </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
