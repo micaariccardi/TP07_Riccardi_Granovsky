@@ -1,23 +1,46 @@
 @{
     ViewData["PreguntadOrt"] = "Home Page";
 }
-
 <br>
 
-    <h3>0000 <mark class="invisible"> --- </mark> Username</h3>
+<h3>@ViewBag.puntaje <mark class="invisible"> --- </mark> @ViewBag.username</h3>
 
-    <br>
-    <br>
+<br>
+<br>
 
 <div class="centro">
-    <h2></h2>
-    <img src="Imagenes/placeholder.png" id="foto_pregunta">
-    <div class="botonRtas">
-        <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">Large button</a></button>
-        <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">Large button</a></button>
+    <h2>@ViewBag.pregunta.enunciado</h2>
+    <img src="Imagenes/@ViewBag.pregunta.foto" id="foto_pregunta">
+    <div class="botonRtas">        
+        @foreach (Respuesta respuesta in ViewBag.respuestas)
+        {
+            if (respuesta.opcion == 1)
+            {
+                <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">@respuesta</a></button>
+            }
+        }        
+        @foreach (Respuesta respuesta in ViewBag.respuestas)
+        {
+            if (respuesta.opcion == 2)
+            {
+                <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">@respuesta</a></button>
+            }
+        }  
     </div>            
     <div class="botonRtas">
-        <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">Large button</a></button>
-        <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">Large button</a></button>
+        @foreach (Respuesta respuesta in ViewBag.respuestas)
+        {
+            if (respuesta.opcion == 3)
+            {
+                <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">@respuesta</a></button>
+            }
+        }
+        @foreach (Respuesta respuesta in ViewBag.respuestas)
+        {
+            if (respuesta.opcion == 4)
+            {
+                <button type="submit" class="btn btn-primary btn-lg"><a href="respuesta.html" class="btn-a">@respuesta</a></button>
+            }
+        }
     </div>
     </div>

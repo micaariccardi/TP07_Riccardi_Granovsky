@@ -29,8 +29,16 @@
       "PackagePath": "staticwebassets\\imagenes\\agua.jpg"
     },
     {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\alemania.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\alemania.PNG"
+    },
+    {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\atomo.jpg",
       "PackagePath": "staticwebassets\\imagenes\\atomo.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\australia.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\australia.jpg"
     },
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\collage.PNG",
@@ -41,8 +49,12 @@
       "PackagePath": "staticwebassets\\imagenes\\darth_vader.PNG"
     },
     {
-      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\deporte.jfif",
-      "PackagePath": "staticwebassets\\imagenes\\deporte.jfif"
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\deporte.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\deporte.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\formula_uno.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\formula_uno.jpg"
     },
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\golden_eye.png",
@@ -73,8 +85,28 @@
       "PackagePath": "staticwebassets\\imagenes\\placeholder.png"
     },
     {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\revolucion.PNG",
+      "PackagePath": "staticwebassets\\imagenes\\revolucion.PNG"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\rio.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\rio.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\rusia.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\rusia.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\simone_biles.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\simone_biles.jpg"
+    },
+    {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\traviata.jpg",
       "PackagePath": "staticwebassets\\imagenes\\traviata.jpg"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\usa.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\usa.jpg"
     },
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\js\\site.js",

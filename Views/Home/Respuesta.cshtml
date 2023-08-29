@@ -1,0 +1,23 @@
+@{
+    ViewData["PreguntadOrt"] = "Home Page";
+}
+
+<h3>@ViewBag.puntaje <mark class="invisible"> --- </mark> @ViewBag.username</h3>
+
+    <br>
+    <div class="centro">
+        @if (!ViewBag.correcta)
+        {
+            <h1 class="rojo">Incorrecto</h1>
+            <br>
+            <img src="Imagenes/perdiste_jaja.gif" alt="Tito con lluvia">
+            <br>
+            <h3 class="azul">La respuesta correcta es @ViewBag.respuestaCorrecta </h3>
+        }
+        else
+        {
+            <h1 class="verde"> Correcto </h1>
+        }
+        <br>
+        <button class="btn btn-outline-success me-2"><a class="btn-a" href= '@Url.Action("VerificarRespuesta")'> Siguiente </a></button>
+    </div>

@@ -33,7 +33,14 @@ public static void  CargarPartida(string nickname, int dificultad, int categoria
 
 public static Pregunta ObtenerProximaPregunta()
 {
-    return preguntas[GenerarRandom(0, preguntas.Count-1)];
+    if(preguntas.Count > 1)
+    {
+        return preguntas[GenerarRandom(0, preguntas.Count-1)];
+    }
+    else if(preguntas.Count == 1)
+    {
+        return preguntas[0];
+    }
 }
 
 public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)

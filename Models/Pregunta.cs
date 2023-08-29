@@ -16,4 +16,6 @@ public Pregunta(int idPreg, int idCat, int idDif, string enun, string fto)
     foto = fto;
 }
 
+public Pregunta(){}
+
 }

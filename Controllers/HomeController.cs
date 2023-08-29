@@ -38,13 +38,12 @@ public class HomeController : Controller
         {
             ViewBag.nombre = Juego.DevolverUsername();
             ViewBag.puntaje = Juego.DevolverPuntajeActual();
-            
             return View("Fin");
         }
         else
         {
             ViewBag.pregunta = Juego.ObtenerProximaPregunta();
-            ViewBag.respuestas = Juego.ObtenerProximasRespuestas(ViewBag.Pregunta.idPregunta);
+            List<Respuesta> respuestas = Juego.ObtenerProximasRespuestas(ViewBag.Pregunta.idPregunta);
             return View("Juego");
         }
     }

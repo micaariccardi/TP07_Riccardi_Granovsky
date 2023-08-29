@@ -9,4 +9,5 @@ public Dificultad(int idDif, string nom)
     nombre = nom;
 }
 
+public Dificultad(){}
 }

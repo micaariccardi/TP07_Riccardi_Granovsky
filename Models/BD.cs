@@ -26,10 +26,10 @@ public static List<Dificultad> ObtenerDificultades()
     return listaDificultades;
 }
 
-public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria)
+public static List<Pregunta> ObtenerPreguntas(int idDificultad, int idCategoria)
 {
     List<Pregunta> listaPreguntas = new List<Pregunta>();
-    if (dificultad == -1 && categoria == -1)
+    if (idDificultad == -1 && idCategoria == -1)
     {
         string sql = "Select * from Pregunta;";
         using(SqlConnection db = new SqlConnection(_connectionString))
@@ -37,31 +37,31 @@ public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria)
             listaPreguntas = db.Query<Pregunta>(sql).ToList();
         }
     }
-    else if (dificultad == -1 && categoria != -1)
+    else if (idDificultad == -1 && idCategoria != -1)
     {
-        string sql = "SELECT * FROM Pregunta WHERE categoria = @pCategoria;";
+        string sql = "SELECT * FROM Pregunta WHERE idCategoria = @pCategoria;";
         
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            listaPreguntas = db.Query<Pregunta>(sql, new {pCategoria = categoria}).ToList();
+            listaPreguntas = db.Query<Pregunta>(sql, new {pCategoria = idCategoria}).ToList();
         }
     }
-    else if (dificultad != -1 && categoria == 1)
+    else if (idDificultad != -1 && idCategoria == 1)
     {
-        string sql = "SELECT * FROM Pregunta WHERE dificultad = @pDificultad;";
+        string sql = "SELECT * FROM Pregunta WHERE idDificultad = @pDificultad;";
         
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            listaPreguntas = db.Query<Pregunta>(sql, new {pDificultad = dificultad}).ToList();
+            listaPreguntas = db.Query<Pregunta>(sql, new {pDificultad = idDificultad}).ToList();
         }
     }
-    else if (dificultad != -1 && categoria != -1)
+    else if (idDificultad != -1 && idCategoria != -1)
     {
-        string sql = "SELECT * FROM Pregunta WHERE categoria = @pCategoria AND dificultad = @pDificultad;";
+        string sql = "SELECT * FROM Pregunta WHERE idCategoria = @pCategoria AND idDificultad = @pDificultad;";
         
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            listaPreguntas = db.Query<Pregunta>(sql, new {pCategoria = categoria, pDificultad = dificultad}).ToList();
+            listaPreguntas = db.Query<Pregunta>(sql, new {pCategoria = idCategoria, pDificultad = idDificultad}).ToList();
         }
     }
     return listaPreguntas;

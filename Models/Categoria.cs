@@ -11,4 +11,6 @@ public Categoria(int idCat, string nom, string fto)
     foto = fto;
 }
 
+public Categoria(){}
+
 }
