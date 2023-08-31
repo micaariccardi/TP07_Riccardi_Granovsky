@@ -33,19 +33,20 @@ public static void  CargarPartida(string nickname, int dificultad, int categoria
 
 public static Pregunta ObtenerProximaPregunta()
 {
-    if(preguntas.Count > 1)
-    {
-        return preguntas[GenerarRandom(0, preguntas.Count-1)];
-    }
-    else if(preguntas.Count == 1)
-    {
-        return preguntas[0];
-    }
+    return preguntas[GenerarRandom(0, preguntas.Count-1)];
 }
 
 public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
 {
-    return BD.ObtenerRespuestas(preguntas);
+    List<Respuesta> Respuestasde1Pregunta = new List<Respuesta>();
+    foreach(Respuesta item in respuestas)
+    {
+        if (item.idPregunta == idPregunta)
+        {
+            Respuestasde1Pregunta.Add(item);
+        }
+    }
+    return Respuestasde1Pregunta;
 }
 
 public static bool VerificarRespuesta(int idPregunta, int idRespuesta)

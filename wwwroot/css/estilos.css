@@ -10,8 +10,8 @@
 
 body{
     background-color: var(--blanco) !important;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
 }
 
 a{
@@ -62,12 +62,17 @@ div li a:hover{
 
 #inicio{
     font-size: 1.5em;
-    color: var(--azul) !important;
+    color: var(--blanco) !important;
     border-color: var(--verde);
+    background-color: var(--azul);
 }
 
-#incio:hover{
+#inicio:hover{
     background-color: var(--verde);
+}
+
+.imgPreg{
+    width: 40em;
 }
 /*Configurar juego*/
 
@@ -124,7 +129,7 @@ select{
 /*botones*/
 
 .btn{
-    color: var(--blanco);
+    color: var(--blanco) !important;
     background-color: var(--azul);
     border-color: var(--azul);
 }
@@ -137,5 +142,6 @@ select{
     background-color: var(--verde);
 }
 .btn-a{
-    color:var(--blanco)
+    color:var(--blanco);
 }
+

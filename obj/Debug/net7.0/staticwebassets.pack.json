@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\imagenes\\Andy.png"
     },
     {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\Arte.webp",
+      "PackagePath": "staticwebassets\\imagenes\\Arte.webp"
+    },
+    {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\Thumbs.db",
       "PackagePath": "staticwebassets\\imagenes\\Thumbs.db"
     },
@@ -83,6 +87,10 @@
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\placeholder.png",
       "PackagePath": "staticwebassets\\imagenes\\placeholder.png"
+    },
+    {
+      "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\preguntados.webp",
+      "PackagePath": "staticwebassets\\imagenes\\preguntados.webp"
     },
     {
       "Id": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\revolucion.PNG",

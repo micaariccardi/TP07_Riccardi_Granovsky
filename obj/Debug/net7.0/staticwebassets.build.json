@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q72rkxbEXy0ojcxyjBMgH+nE6RfnacCU6rvffAiv9tM=",
+  "Hash": "Y2Jea8xnE8CYaMAMrZ9P5j0BKRktXAQlNR7ioljv8GY=",
   "Source": "TP07_Riccardi_Granovsky",
   "BasePath": "_content/TP07_Riccardi_Granovsky",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\Andy.png"
+    },
+    {
+      "Identity": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\Arte.webp",
+      "SourceId": "TP07_Riccardi_Granovsky",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\",
+      "BasePath": "_content/TP07_Riccardi_Granovsky",
+      "RelativePath": "imagenes/Arte.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Arte.webp"
     },
     {
       "Identity": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\atomo.jpg",
@@ -372,6 +389,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\placeholder.png"
+    },
+    {
+      "Identity": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\preguntados.webp",
+      "SourceId": "TP07_Riccardi_Granovsky",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\",
+      "BasePath": "_content/TP07_Riccardi_Granovsky",
+      "RelativePath": "imagenes/preguntados.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\preguntados.webp"
     },
     {
       "Identity": "Z:\\2023\\Programación\\TP07_Riccardi_Granovsky\\wwwroot\\imagenes\\revolucion.PNG",

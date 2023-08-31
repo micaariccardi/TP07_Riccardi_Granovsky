@@ -1,12 +1,13 @@
 ﻿@{
     ViewData["PreguntadOrt"] = "Home Page";
 }
+<br>
 
 <div class="centro">
-        <img src="Imagenes/placeholder.png" class="centro">
+        <img src="/Imagenes/preguntados.webp" class="centro imgPreg">
         <br>
         <br>
-        <form>
-            <button class="btn btn-outline-success me-2" id="inicio" type="button"><a class="btn-a" href='@Url.Action("ConfigurarJuego")'>JUGAR</a></button>
+        <form action = '@Url.Action("ConfigurarJuego")' method = post>
+            <button type="submit" class="btn btn-a btn-outline-success me-2" id="inicio" type="button"> JUGAR </button>
         </form>
     </div>

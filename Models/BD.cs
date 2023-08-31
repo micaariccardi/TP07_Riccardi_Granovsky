@@ -39,14 +39,14 @@ public static List<Pregunta> ObtenerPreguntas(int idDificultad, int idCategoria)
     }
     else if (idDificultad == -1 && idCategoria != -1)
     {
-        string sql = "SELECT * FROM Pregunta WHERE idCategoria = @pCategoria;";
+        string sql = "SELECT * FROM Pregunta WHERE idCategoria = " + idCategoria;
         
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            listaPreguntas = db.Query<Pregunta>(sql, new {pCategoria = idCategoria}).ToList();
+            listaPreguntas = db.Query<Pregunta>(sql).ToList();
         }
     }
-    else if (idDificultad != -1 && idCategoria == 1)
+    else if (idDificultad != -1 && idCategoria == -1)
     {
         string sql = "SELECT * FROM Pregunta WHERE idDificultad = @pDificultad;";
         
@@ -72,14 +72,26 @@ public static List<Respuesta> ObtenerRespuestas(List<Pregunta> preguntas)
     List<Respuesta> listaRespuestas = new List<Respuesta>();
     foreach (Pregunta pregunta in preguntas)
     {
-        string sql = "SELECT * FROM Respuesta INNER JOIN Pregunta ON Pregunta.idPregunta = Respuesta.idPregunta WHERE idPregunta = @pIdPregunta";
+        string sql = "SELECT * FROM Respuesta WHERE idPregunta = @pIdPregunta";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            listaRespuestas.Add(db.QueryFirstOrDefault<Respuesta>(sql, new {@pIdPregunta = pregunta.idPregunta}));
+            listaRespuestas.AddRange(db.Query<Respuesta>(sql, new {@pIdPregunta = pregunta.idPregunta}).ToList());
         }
     }
     return listaRespuestas;
 }
+
+/* 
+public static Respuesta ObtenerRespuestaEspecifica(Pregunta pregunta, int orden)
+{
+    Respuesta respuesta = Respuesta();
+    string sql = "SELECT * FROM Respuesta WHERE idPregunta = " + ToString(pregunta.idPregunta) + " AND opcion = " + orden + ";";
+    using(SqlConnection db = new SqlConnection(_connectionString))
+    {
+        respuesta = db.QueryFirstOrDefault<Respuesta>(sql);
+    }
+    return respuesta;
+} */
 
 public static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
 {

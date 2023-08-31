@@ -5,7 +5,9 @@
 <div class="centro">
     <h1>@ViewBag.puntaje</h1>
     <h2>@ViewBag.nombre</h2>
-    <img src="Imagenes/Andy.png">
+    <img src="/Imagenes/Andy.png">
     <br>
-    <botton class="btn btn-outline-success me-2"><a href="configurarJuego.html" class="btn-a">Volver a Jugar</a></botton>
+    <form action = '@Url.Action("ConfigurarJuego")' method = "post">
+        <button type class="btn btn-a btn-outline-success me-2">Volver a Jugar</button>
+    </form>
 </div>
